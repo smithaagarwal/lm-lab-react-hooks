@@ -1,4 +1,4 @@
-import useTodo from "./use_todo";
+import useFetchAPI from "./use_fetch_api";
 
 /** This is the response that TypiCode gives for the /todos/ endpoint */
 interface TodoResponse {
@@ -10,7 +10,7 @@ interface TodoResponse {
 
 export const Todo = () => {
   const url = "https://jsonplaceholder.typicode.com/todos/1";
-  const response = useTodo<TodoResponse>(url);
+  const response = useFetchAPI<TodoResponse>(url);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { isError } from "../../../helpers/is_error";
 
-const useTodo = <T,>(url: string) => {
+const useFetchAPI = <T,>(url: string) => {
   const [data, setData] = useState<T>();
   const [isFetching, setIsFetching] = useState(true);
 
@@ -25,4 +25,4 @@ const useTodo = <T,>(url: string) => {
 
   return { data, isFetching };
 };
-export default useTodo;
+export default useFetchAPI;
